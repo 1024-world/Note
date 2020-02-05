@@ -24,16 +24,16 @@ class TreeDemo
         $ceo->addChildren($coo);
 
         //第三层
-        $seniorArchitect = new TreeNode("高级设计师");
-        $userInterfaceDesigner = new TreeNode("UI设计师");
-        $qualityAssuranceEngineer = new TreeNode("测试工程师");
-        $cto->addChildren($seniorArchitect);
-        $cto->addChildren($userInterfaceDesigner);
-        $cto->addChildren($qualityAssuranceEngineer);
+        $accountant = new TreeNode("注册会计师");
+        $cfo->addChildren($accountant);
 
         $softwareEngineer = new TreeNode("软件工程师");
-        $seniorArchitect->addChildren($softwareEngineer);
+        $cto->addChildren($softwareEngineer);
 
+        $userOperation = new TreeNode("用户运营");
+        $coo->addChildren($userOperation);
+
+        //遍历树
         $tree->traverse($tree->root);
     }
 }
