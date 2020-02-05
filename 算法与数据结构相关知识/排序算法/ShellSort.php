@@ -2,7 +2,7 @@
 
 namespace Algorithm;
 
-class HeapSort
+class ShellSort
 {
     public function sort($arr)
     {

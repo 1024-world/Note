@@ -11,7 +11,7 @@ namespace Algorithm;
  */
 class InsertSort
 {
-    public function index($arr)
+    public function sort($arr)
     {
         $len = count($arr);
         if ($len <= 1) {
@@ -35,6 +35,6 @@ class InsertSort
 }
 
 $arr = [1,2,5,9,3,7,12];
-$res = (new InsertSort())->index($arr);
+$res = (new InsertSort())->sort($arr);
 
 print_r($res);

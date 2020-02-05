@@ -12,7 +12,7 @@ namespace Algorithm;
  */
 class QuickSort 
 {
-    public function index($arr)
+    public function sort($arr)
     {
         $len = count($arr);
         if ($len <= 1) {
@@ -30,14 +30,14 @@ class QuickSort
                 $right[] = $arr[$i];
             }
         }
-        $left = $this->index($left);
-        $right = $this->index($right);
+        $left = $this->sort($left);
+        $right = $this->sort($right);
 
         return array_merge($left, [$baseNum], $right);
     }
 }
 
 $a = [3, 5, 2, 7, 9, 16];
-$res = (new QuickSort())->index($a);
+$res = (new QuickSort())->sort($a);
 
 print_r($res);

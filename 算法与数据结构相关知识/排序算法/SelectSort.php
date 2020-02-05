@@ -12,7 +12,7 @@ namespace Algorithm;
  */
 class SelectSort
 {
-    public function index($arr)
+    public function sort($arr)
     {
         $len = count($arr);
         if ($len <= 1) {
@@ -38,6 +38,6 @@ class SelectSort
 }
 
 $arr = [2,4,6,3,9,14,65,32];
-$res = (new SelectSort())->index($arr);
+$res = (new SelectSort())->sort($arr);
 
 print_r($res);

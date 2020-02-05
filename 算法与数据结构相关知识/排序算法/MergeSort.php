@@ -13,7 +13,7 @@ namespace Algorithm;
  */
 class MergeSort
 {
-    public function index($arr)
+    public function sort($arr)
     {
         if (count($arr) == 1)
         {
@@ -24,8 +24,8 @@ class MergeSort
         $left = array_slice($arr, 0, $mid);
         $right = array_slice($arr, $mid);
 
-        $left = $this->index($left);
-        $right = $this->index($right);
+        $left = $this->sort($left);
+        $right = $this->sort($right);
 
         return $this->merge($left, $right);
     }
@@ -53,6 +53,6 @@ class MergeSort
 }
 
 $arr = [12, 4, 24, 43, 8, 2, 89, 100, 232];
-$res = (new MergeSort())->index($arr);
+$res = (new MergeSort())->sort($arr);
 
 var_dump($res);

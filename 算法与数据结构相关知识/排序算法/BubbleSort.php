@@ -13,7 +13,7 @@ namespace Algorithm;
  */
 class BubbleSort
 {
-    public function index($arr)
+    public function sort($arr)
     {
         $len = count($arr);
         if ($len <= 1) {
@@ -36,6 +36,6 @@ class BubbleSort
 }
 
 $arr = [3,2,5,7,3,9,23,53,1];
-$res = (new BubbleSort())->index($arr);
+$res = (new BubbleSort())->sort($arr);
 
 print_r($res);
