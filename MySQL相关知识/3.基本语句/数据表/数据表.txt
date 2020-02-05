@@ -1,0 +1,53 @@
+创建数据表：
+create table XXX(
+    字段名 定义字段
+);
+
+删除数据表：
+drop table XXX;
+
+修改数据表：
+alter table XXX;
+
+插入数据：
+insert into XXX (fields, fields, fields) values (value1, value2, value3);
+
+查询数据：
+select column_name from XXX;
+
+条件子句：
+where 
+
+更新数据：
+update XXX set field = new_value;
+
+删除数据：
+delete from XXX where ......
+
+模糊匹配：
+%代表匹配任何字符
+select * from XXX where name like shi%;
+
+合并结果集Union：
+select * from XXX union select * from XXXX;
+多个select会删除重复的数据。
+
+排序数据Order By：
+...... order by field desc;
+
+数据分组group by：
+根据一个或多个列对结果集进行分组：
+
+连接操作：
+inner join等连：获取两个表中匹配关系的记录；
+left join左连：获取左表的所有数据，即便右表中没有。
+right join右连：获取右表中数据，即使左表中没有。
+
+创建索引：
+create index index_name on XXX(field_name(length));
+alter table XXX add index index_name(column_name);
+创建表时直接创建。
+
+having子句：
+相似于where，where只能跟在from后面，having只能跟在group by后面。
+用于对分组后的组信息进行过滤。

@@ -1,0 +1,14 @@
+MySQL支持的最小时间粒度为秒
+MariaDB支持的最小时间粒度为微妙
+
+DATETIME和TIMESTAMP
+
+DATETIME：这个类型能保存大范围的值，从1001到9999年，精度为秒。他把日期和时间封装到格式为YYYYMMDDHHMMSS的整数中，与时区无关。使用8个字节的存储空间。默认情况下，MySQL以一种可排序的、无歧义的格式显示DATETIME值。这是ANSI标准定义的日期和时间表示方法。
+
+TIMESTAMP：保存了从1970年1月1日午夜以来的秒数，他和Unix时间戳相同。TIMESTAMP只使用了4个字节的存储空间，因此他的范围比DATETIME小的多：只能从1970年到2038年。
+
+MySQL提供了FROM_UNIXTIME()函数把UNIX时间戳转换为日期，并提供了UNIX_TIMESTAMP()函数把日期转换为Unix时间戳。
+
+TIMESTAMP显示的值依赖于时区。MySQL服务器、操作系统、以及客户端连接都有时区设置。TIMESTAMP列默认为NOT NULL，这和其他数据类型不一样。
+
+除了特殊行为之外，通常应该尽量使用TIMESTAMP，因为他比DATETIME的空间效率更高。，有时候人们会将Unix时间戳存储为整数值。
