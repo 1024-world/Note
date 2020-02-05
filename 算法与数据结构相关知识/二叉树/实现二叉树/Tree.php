@@ -15,7 +15,7 @@ class Tree
     {
         if ($treeNode)
         {
-            echo str_repeat(' ', $level) . $treeNode->data . PHP_EOL;
+            echo str_repeat('-', $level) . $treeNode->data . PHP_EOL;
 
             foreach ($treeNode->children as $child) {
                 $this->traverse($child, $level + 1);

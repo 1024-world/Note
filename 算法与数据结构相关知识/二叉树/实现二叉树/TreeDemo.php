@@ -2,36 +2,37 @@
 
 namespace Algorithm;
 
+include "./TreeNode.php";
+include "./Tree.php";
+
 class TreeDemo
 {
     public function index()
     {
-        $ceo = new TreeNode('ceo');
-
+        //根节点
+        $ceo = new TreeNode('首席执行官');
         $tree = new Tree($ceo);
 
-        $cfo = new TreeNode('cfo');
-        $cto = new TreeNode('cto');
-        $cmo = new TreeNode('cmo');
-        $coo = new TreeNode('coo');
-
+        //第二层
+        $cfo = new TreeNode('首席财务官');
+        $cto = new TreeNode('首席技术官');
+        $cmo = new TreeNode('首席营销官');
+        $coo = new TreeNode('首席运营官');
         $ceo->addChildren($cfo);
         $ceo->addChildren($cto);
         $ceo->addChildren($cmo);
         $ceo->addChildren($coo);
 
-        $seniorArchitect = new TreeNode("Senior Architect");
-        $softwareEngineer = new TreeNode("SoftwareEngineer");
-
-        $userInterfaceDesigner = new TreeNode("userInterface Designer");
-        $qualityAssuranceEngineer = new TreeNode("qualityAssurance Engineer");
-
-
+        //第三层
+        $seniorArchitect = new TreeNode("高级设计师");
+        $userInterfaceDesigner = new TreeNode("UI设计师");
+        $qualityAssuranceEngineer = new TreeNode("测试工程师");
         $cto->addChildren($seniorArchitect);
-        $seniorArchitect->addChildren($softwareEngineer);
-
         $cto->addChildren($userInterfaceDesigner);
         $cto->addChildren($qualityAssuranceEngineer);
+
+        $softwareEngineer = new TreeNode("软件工程师");
+        $seniorArchitect->addChildren($softwareEngineer);
 
         $tree->traverse($tree->root);
     }
