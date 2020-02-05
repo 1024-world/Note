@@ -16,10 +16,16 @@ class Tree
         if ($treeNode)
         {
             echo str_repeat('-', $level) . $treeNode->data . PHP_EOL;
+        }
 
-            foreach ($treeNode->children as $child) {
-                $this->traverse($child, $level + 1);
-            }
+        if ($treeNode->leftChildren)
+        {
+            $this->traverse($treeNode->leftChildren, $level + 1);
+        }
+
+        if ($treeNode->rightChildren)
+        {
+            $this->traverse($treeNode->rightChildren, $level + 1);
         }
     }
 }

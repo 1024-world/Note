@@ -6,15 +6,22 @@ class TreeNode
 {
     public $data = null;
 
-    public $children = [];
+    public $leftChildren = null;
+
+    public $rightChildren = null;
 
     public function __construct($data = null)
     {
         $this->data = $data;
     }
 
-    public function addChildren(TreeNode $treeNode)
+    public function addLeftChildren(TreeNode $treeNode)
     {
-        $this->children[] = $treeNode;
+        $this->leftChildren = $treeNode;
+    }
+
+    public function addRightChildren(TreeNode $treeNode)
+    {
+        $this->rightChildren = $treeNode;
     }
 }

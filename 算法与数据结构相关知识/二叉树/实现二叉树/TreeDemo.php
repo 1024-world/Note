@@ -16,22 +16,15 @@ class TreeDemo
         //第二层
         $cfo = new TreeNode('首席财务官');
         $cto = new TreeNode('首席技术官');
-        $cmo = new TreeNode('首席营销官');
-        $coo = new TreeNode('首席运营官');
-        $ceo->addChildren($cfo);
-        $ceo->addChildren($cto);
-        $ceo->addChildren($cmo);
-        $ceo->addChildren($coo);
+        $ceo->addLeftChildren($cfo);
+        $ceo->addRightChildren($cto);
 
         //第三层
         $accountant = new TreeNode("注册会计师");
-        $cfo->addChildren($accountant);
+        $cfo->addLeftChildren($accountant);
 
         $softwareEngineer = new TreeNode("软件工程师");
-        $cto->addChildren($softwareEngineer);
-
-        $userOperation = new TreeNode("用户运营");
-        $coo->addChildren($userOperation);
+        $cto->addRightChildren($softwareEngineer);
 
         //遍历树
         $tree->traverse($tree->root);
