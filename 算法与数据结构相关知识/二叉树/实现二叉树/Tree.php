@@ -1,6 +1,6 @@
 <?php
 
-namespace Algorithm;
+namespace Algorithm\BinaryTree;
 
 class Tree
 {
@@ -13,19 +13,6 @@ class Tree
 
     public function traverse(TreeNode $treeNode, $level = 0)
     {
-        if ($treeNode)
-        {
-            echo str_repeat('-', $level) . $treeNode->data . PHP_EOL;
-        }
-
-        if ($treeNode->leftChildren)
-        {
-            $this->traverse($treeNode->leftChildren, $level + 1);
-        }
-
-        if ($treeNode->rightChildren)
-        {
-            $this->traverse($treeNode->rightChildren, $level + 1);
-        }
+        //详见具体的相关遍历方法
     }
 }

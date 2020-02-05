@@ -1,18 +1,18 @@
 <?php
 
-namespace Algorithm;
+namespace Algorithm\BinaryTree;
 
 class TreeNode
 {
-    public $data = null;
+    public $value = null;
 
     public $leftChildren = null;
 
     public $rightChildren = null;
 
-    public function __construct($data = null)
+    public function __construct($value = null)
     {
-        $this->data = $data;
+        $this->value = $value;
     }
 
     public function addLeftChildren(TreeNode $treeNode)

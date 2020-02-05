@@ -1,6 +1,6 @@
 <?php
 
-namespace Algorithm;
+namespace Algorithm\BinaryTree;
 
 include "./TreeNode.php";
 include "./Tree.php";
