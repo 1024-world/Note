@@ -1,6 +1,6 @@
 <?php
 
-namespace Algorithm\BinaryTree;
+namespace Algorithm\BinaryTree\Struct;
 
 class TreeNode
 {

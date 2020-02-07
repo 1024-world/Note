@@ -6,7 +6,7 @@ class Adapter implements ProductAInterface
 {
     private $productB;
 
-    public function __contruct(ProductBInterface $productB)
+    public function __construct(ProductBInterface $productB)
     {
         $this->productB = $productB;
     }

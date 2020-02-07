@@ -1,17 +1,21 @@
 <?php
 
+namespace Algorithm\BinaryTree\PreorderTraversion;
 
-namespace Algorithm\BinaryTree;
+use Algorithm\BinaryTree\Struct\TreeNode;
 
-
-class PostorderByRecursive
+class Recursion
 {
     public function traversal(TreeNode $treeNode, $level = 0)
     {
+        echo '二叉树-先序遍历-递归方式' . PHP_EOL;
+
         if ($treeNode->value == null)
         {
             return;
         }
+
+        echo str_repeat('---', $level) . $treeNode->value . PHP_EOL;
 
         if ($treeNode->leftChildren)
         {
@@ -22,7 +26,5 @@ class PostorderByRecursive
         {
             $this->traversal($treeNode->rightChildren, $level+1);
         }
-
-        echo str_repeat('---', $level) . $treeNode->value . PHP_EOL;
     }
 }

@@ -1,0 +1,16 @@
+{
+  "require":{
+
+  },
+  "autoload":{
+    "psr-4":{
+      "Algorithm\\" : "Algorithm/"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}

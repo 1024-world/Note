@@ -11,6 +11,6 @@ class ProxyProduct implements ProductInterface
             $this->product = new Product();
         }
 
-        $this->productFunctionA();
+        $this->product->productFunctionA();
     }
 } 
