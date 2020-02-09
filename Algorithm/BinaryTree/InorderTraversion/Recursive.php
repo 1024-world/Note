@@ -8,8 +8,6 @@ class Recursive
 {
     public function traversal(TreeNode $treeNode, $level = 0)
     {
-        echo '二叉树-中序遍历-递归方式' . PHP_EOL;
-
         if ($treeNode->value == null)
         {
             return;

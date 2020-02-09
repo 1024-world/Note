@@ -33,20 +33,27 @@ class Demo
         $cto->addRightChildren($softwareEngineer);
 
         //遍历树
+        echo '二叉树-先序遍历-递归方式' . PHP_EOL;
         (new PreRecursion())->traversal($tree->root);
+
+        echo '二叉树-先序遍历-非递归方式' . PHP_EOL;
         (new PreNonRecursion())->traversal($tree->root);
 
+        echo '二叉树-中序遍历-递归方式' . PHP_EOL;
         (new InRecursive())->traversal($tree->root);
+
+        echo '二叉树-中序遍历-非递归方式' . PHP_EOL;
         (new InNonRecursive())->traversal($tree->root);
 
+        echo '二叉树-后序遍历-递归方式' . PHP_EOL;
         (new PostRecursive())->traversal($tree->root);
-
+        
+        echo '二叉树-层级遍历-非递归方式' . PHP_EOL;
         (new LayerNonRecursive())->traversal($tree->root);
     }
 }
 
 // 引用composer的自动加载
 require_once dirname(__DIR__) . '/../vendor/autoload.php';
-spl_autoload_register('autoload', true, true);
 
 (new Demo())->index();

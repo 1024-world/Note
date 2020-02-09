@@ -8,8 +8,6 @@ class NonRecursive
 {
     public function traversal(TreeNode $treeNode)
     {
-        echo '二叉树-中序遍历-非递归方式' . PHP_EOL;
-
         $stack = [];
         $curNode = $treeNode;
 
