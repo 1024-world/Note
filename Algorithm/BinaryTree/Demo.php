@@ -4,6 +4,7 @@ namespace Algorithm\BinaryTree;
 
 use Algorithm\BinaryTree\InorderTraversion\NonRecursive as InNonRecursive;
 use Algorithm\BinaryTree\InorderTraversion\Recursive as InRecursive;
+use Algorithm\BinaryTree\LayerTraversion\NonRecursive as LayerNonRecursive;
 use Algorithm\BinaryTree\PostorderTraversion\Recursive as PostRecursive;
 use Algorithm\BinaryTree\PreorderTraversion\Recursion as PreRecursion;
 use Algorithm\BinaryTree\PreorderTraversion\NonRecursion as PreNonRecursion;
@@ -39,6 +40,8 @@ class Demo
         (new InNonRecursive())->traversal($tree->root);
 
         (new PostRecursive())->traversal($tree->root);
+
+        (new LayerNonRecursive())->traversal($tree->root);
     }
 }
 

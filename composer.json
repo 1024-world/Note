@@ -2,11 +2,25 @@
   "require":{
 
   },
+
   "autoload":{
     "psr-4":{
-      "Algorithm\\" : "Algorithm/"
+      "Algorithm\\" : "Algorithm/",
+      "DesignPattern" : "DesignPattern",
+      "Cache" : "Cache",
+      "Frame" : "Frame",
+      "HighlyConcurrent" : "HighlyConcurrent",
+      "Linux" : "Linux",
+      "MySQL" : "MySQL",
+      "Network" : "Network",
+      "Nginx" : "Nginx",
+      "OOP" : "OOP",
+      "PHP" : "PHP",
+      "Queue" : "Queue",
+      "Regular" : "Regular"
     }
   },
+
   "repositories": {
     "packagist": {
       "type": "composer",
