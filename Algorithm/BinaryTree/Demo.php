@@ -2,7 +2,6 @@
 
 namespace Algorithm\BinaryTree;
 
-use Algorithm\autoload;
 use Algorithm\BinaryTree\InorderTraversion\NonRecursive as InNonRecursive;
 use Algorithm\BinaryTree\InorderTraversion\Recursive as InRecursive;
 use Algorithm\BinaryTree\LayerTraversion\NonRecursive as LayerNonRecursive;
@@ -46,5 +45,8 @@ class Demo
     }
 }
 
-(new autoload());
+// 引用composer的自动加载
+require_once dirname(__DIR__) . '/../vendor/autoload.php';
+spl_autoload_register('autoload', true, true);
+
 (new Demo())->index();
