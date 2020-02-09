@@ -2,6 +2,7 @@
 
 namespace Algorithm\BinaryTree;
 
+use Algorithm\autoload;
 use Algorithm\BinaryTree\InorderTraversion\NonRecursive as InNonRecursive;
 use Algorithm\BinaryTree\InorderTraversion\Recursive as InRecursive;
 use Algorithm\BinaryTree\LayerTraversion\NonRecursive as LayerNonRecursive;
@@ -45,4 +46,5 @@ class Demo
     }
 }
 
+(new autoload());
 (new Demo())->index();
