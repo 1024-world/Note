@@ -5,6 +5,7 @@ namespace Algorithm\BinaryTree;
 use Algorithm\BinaryTree\InorderTraversion\NonRecursive as InNonRecursive;
 use Algorithm\BinaryTree\InorderTraversion\Recursive as InRecursive;
 use Algorithm\BinaryTree\LayerTraversion\NonRecursive as LayerNonRecursive;
+use Algorithm\BinaryTree\PostorderTraversion\NonRecursive as PostNonRecursive;
 use Algorithm\BinaryTree\PostorderTraversion\Recursive as PostRecursive;
 use Algorithm\BinaryTree\PreorderTraversion\Recursion as PreRecursion;
 use Algorithm\BinaryTree\PreorderTraversion\NonRecursion as PreNonRecursion;
@@ -16,21 +17,25 @@ class Demo
     public function index()
     {
         //根节点
-        $ceo = new TreeNode('首席执行官');
-        $tree = new Tree($ceo);
+        $one = new TreeNode('1');
+        $tree = new Tree($one);
 
         //第二层
-        $cfo = new TreeNode('首席财务官');
-        $cto = new TreeNode('首席技术官');
-        $ceo->addLeftChildren($cfo);
-        $ceo->addRightChildren($cto);
+        $two = new TreeNode('2');
+        $three = new TreeNode('3');
+        $one->addLeftChildren($two);
+        $one->addRightChildren($three);
 
         //第三层
-        $accountant = new TreeNode("注册会计师");
-        $cfo->addLeftChildren($accountant);
+        $four = new TreeNode('4');
+        $five = new TreeNode('5');
+        $two->addLeftChildren($four);
+        $two->addRightChildren($five);
 
-        $softwareEngineer = new TreeNode("软件工程师");
-        $cto->addRightChildren($softwareEngineer);
+        $six = new TreeNode('6');
+        $seven = new TreeNode('7');
+        $three->addLeftChildren($six);
+        $three->addRightChildren($seven);
 
         //遍历树
         echo '二叉树-先序遍历-递归方式' . PHP_EOL;
@@ -47,7 +52,8 @@ class Demo
 
         echo '二叉树-后序遍历-递归方式' . PHP_EOL;
         (new PostRecursive())->traversal($tree->root);
-        
+
+        (new PostNonRecursive())->traversal($tree->root);
         echo '二叉树-层级遍历-非递归方式' . PHP_EOL;
         (new LayerNonRecursive())->traversal($tree->root);
     }
