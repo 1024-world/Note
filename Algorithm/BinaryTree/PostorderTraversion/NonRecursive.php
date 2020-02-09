@@ -9,10 +9,10 @@ class NonRecursive
     public function traversal(TreeNode $treeNode)
     {
         // 使用两个栈
-        echo '二叉树-后序遍历-非递归方式-使用两个栈';
+        echo '二叉树-后序遍历-非递归方式-使用两个栈' . PHP_EOL;
         $this->useDoubleStack($treeNode);
         // 使用一个栈
-        echo '二叉树-后序遍历-非递归方式-使用一个栈';
+        echo '二叉树-后序遍历-非递归方式-使用一个栈' . PHP_EOL;
         $this->useStack($treeNode);
     }
 
@@ -40,7 +40,7 @@ class NonRecursive
         while ($stack2)
         {
             $node = array_pop($stack2);
-            echo $node->value . ' ';
+            echo $node->value . PHP_EOL;
         }
     }
 
@@ -66,7 +66,7 @@ class NonRecursive
             } else {
                 $node = array_pop($stack);
                 $head = $node;
-                echo $node->value . " ";
+                echo $node->value . PHP_EOL;
             }
         }
     }
