@@ -14,7 +14,17 @@ use Algorithm\BinaryTree\Struct\TreeNode;
 
 class Demo
 {
-    public function index()
+    public function __construct()
+    {
+        $tree = $this->structTree();
+        $this->traversalTree($tree);
+    }
+
+    /**
+     * @desc 创建树
+     * @return Tree
+     */
+    private function structTree()
     {
         //根节点
         $one = new TreeNode('1');
@@ -37,7 +47,15 @@ class Demo
         $three->addLeftChildren($six);
         $three->addRightChildren($seven);
 
-        //遍历树
+        return $tree;
+    }
+
+    /**
+     * @desc 遍历树
+     * @param $tree
+     */
+    private function traversalTree($tree)
+    {
         echo '二叉树-先序遍历-递归方式' . PHP_EOL;
         (new PreRecursion())->traversal($tree->root);
 
@@ -62,4 +80,4 @@ class Demo
 // 引用composer的自动加载
 require_once dirname(__DIR__) . '/../vendor/autoload.php';
 
-(new Demo())->index();
+(new Demo());

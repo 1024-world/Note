@@ -55,4 +55,4 @@ class MergeSort
 $arr = [12, 4, 24, 43, 8, 2, 89, 100, 232];
 $res = (new MergeSort())->sort($arr);
 
-var_dump($res);
+print_r($res);
