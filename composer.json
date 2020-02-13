@@ -6,18 +6,18 @@
   "autoload":{
     "psr-4":{
       "Algorithm\\" : "Algorithm/",
-      "DesignPattern" : "DesignPattern",
-      "Cache" : "Cache",
-      "Frame" : "Frame",
-      "HighlyConcurrent" : "HighlyConcurrent",
-      "Linux" : "Linux",
-      "MySQL" : "MySQL",
-      "Network" : "Network",
-      "Nginx" : "Nginx",
-      "OOP" : "OOP",
-      "PHP" : "PHP",
-      "Queue" : "Queue",
-      "Regular" : "Regular"
+      "DesignPattern\\" : "DesignPattern/",
+      "Cache\\" : "Cache/",
+      "Frame\\" : "Frame/",
+      "HighlyConcurrent\\" : "HighlyConcurrent/",
+      "Linux\\" : "Linux/",
+      "MySQL\\" : "MySQL/",
+      "Network\\" : "Network/",
+      "Nginx\\" : "Nginx/",
+      "OOP\\" : "OOP/",
+      "PHP\\" : "PHP/",
+      "Queue\\" : "Queue/",
+      "Regular\\" : "Regular/"
     }
   },
 
