@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Algorithm\Sort;
 
 /**

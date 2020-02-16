@@ -2,6 +2,14 @@
 
 namespace Algorithm\Sort;
 
+use Algorithm\Sort\Simple\BubbleSort;
+use Algorithm\Sort\Simple\HeapSort;
+use Algorithm\Sort\Simple\InsertSort;
+use Algorithm\Sort\Simple\MergeSort;
+use Algorithm\Sort\Simple\QuickSort;
+use Algorithm\Sort\Simple\SelectSort;
+use Algorithm\Sort\Simple\ShellSort;
+
 /**
  * Class Facade
  * @package Algorithm\Sort
