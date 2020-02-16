@@ -2,6 +2,11 @@
 
 namespace DesignPattern\Singleton;
 
+/**
+ * Class Singleton
+ * @package DesignPattern\Singleton
+ * @desc 单例模式
+ */
 class Singleton {
 
     protected static $instance = NULL;
