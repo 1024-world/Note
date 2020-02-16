@@ -3,16 +3,19 @@
 namespace Algorithm\Sort;
 
 /**
- * 快速排序
+ * Class QuickSort
+ * @package Algorithm\Sort
+ * @desc 快速排序
+ *
  * 核心思想：先从数列中随机取出一个基准值，将比这个数小的放入到左子数列，
  * 比这个大的放入到右子数列中，按上述步骤重复操作左右两个子数列，直到每
  * 个区间只有一个数。
- * 
+ *
  * 平均时间复杂度：O(N*logN)
  */
 class QuickSort 
 {
-    public function sort($arr)
+    public function sort($arr = [])
     {
         $len = count($arr);
         if ($len <= 1) {
@@ -36,8 +39,3 @@ class QuickSort
         return array_merge($left, [$baseNum], $right);
     }
 }
-
-$a = [3, 5, 2, 7, 9, 16];
-$res = (new QuickSort())->sort($a);
-
-print_r($res);

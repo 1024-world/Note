@@ -4,8 +4,8 @@ namespace Algorithm\Sort;
 /**
  * Class MergeSort
  * @package Algorithm
+ * @desc 归并排序
  *
- * 归并排序
  * 核心思想：将一个大的序列看成是由N个有序的子序列组成，每个字序列的长度为1，然后两两归并
  * 得到一个合并后的有序序列，然后再两两归并，如此重复，直到得到一个长度为N的有序序列。
  *
@@ -13,7 +13,7 @@ namespace Algorithm\Sort;
  */
 class MergeSort
 {
-    public function sort($arr)
+    public function sort($arr = [])
     {
         if (count($arr) == 1)
         {
@@ -51,8 +51,3 @@ class MergeSort
         return $res;
     }
 }
-
-$arr = [12, 4, 24, 43, 8, 2, 89, 100, 232];
-$res = (new MergeSort())->sort($arr);
-
-print_r($res);

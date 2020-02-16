@@ -3,7 +3,10 @@
 namespace Algorithm\Sort;
 
 /**
- * 选择排序
+ * Class SelectSort
+ * @package Algorithm\Sort
+ * @desc 选择排序
+ *
  * 核心思想：遍历后N-1个数，逐个与第一个数值比较，始终保留最小值的key，
  * 最后将第一个值与最小值进行位置互换。接下来遍历后N-2个数，逐个与第二
  * 个数进行比较，重复上述步骤，直到最后一个数。
@@ -12,7 +15,7 @@ namespace Algorithm\Sort;
  */
 class SelectSort
 {
-    public function sort($arr)
+    public function sort($arr = [])
     {
         $len = count($arr);
         if ($len <= 1) {
@@ -36,8 +39,3 @@ class SelectSort
         return $arr;
     }
 }
-
-$arr = [2,4,6,3,9,14,65,32];
-$res = (new SelectSort())->sort($arr);
-
-print_r($res);
