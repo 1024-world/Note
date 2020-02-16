@@ -1,14 +1,21 @@
 <?php
 
-
-namespace Algorithm\BinaryTree\LayerTraversion;
-
+namespace Algorithm\BinaryTree\Traversal;
 
 use Algorithm\BinaryTree\Struct\TreeNode;
 
-class NonRecursive
+/**
+ * Class Layer
+ * @package Algorithm\BinaryTree\Traversal
+ * @desc 二叉树层级遍历
+ */
+class Layer
 {
-    public function traversal(TreeNode $treeNode)
+    /**
+     * @desc 非递归方式实现
+     * @param TreeNode $treeNode
+     */
+    public function NonRecursive(TreeNode $treeNode)
     {
         if (!$treeNode)
             return;
@@ -25,21 +32,19 @@ class NonRecursive
             $curNode = array_shift($queue);
             echo $curNode->value . " ";
 
-            if ($curNode->leftChildren)
-            {
+            if ($curNode->leftChildren) {
                 $nLineNode = $curNode->leftChildren;
                 array_push($queue, $curNode->leftChildren);
             }
-            if ($curNode->rightChildren)
-            {
+            if ($curNode->rightChildren) {
                 $nLineNode = $curNode->rightChildren;
                 array_push($queue, $curNode->rightChildren);
             }
-            if ($curNode == $lineNode)
-            {
+            if ($curNode == $lineNode) {
                 $lineNode = $nLineNode;
                 echo PHP_EOL;
             }
         }
     }
+
 }

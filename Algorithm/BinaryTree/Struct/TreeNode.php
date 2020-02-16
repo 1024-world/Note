@@ -2,12 +2,15 @@
 
 namespace Algorithm\BinaryTree\Struct;
 
+/**
+ * Class TreeNode
+ * @package Algorithm\BinaryTree\Struct
+ * @desc 二叉树节点
+ */
 class TreeNode
 {
     public $value = null;
-
     public $leftChildren = null;
-
     public $rightChildren = null;
 
     public function __construct($value = null)

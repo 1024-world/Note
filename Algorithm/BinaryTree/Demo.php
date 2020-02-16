@@ -2,48 +2,39 @@
 
 namespace Algorithm\BinaryTree;
 
-use Algorithm\BinaryTree\InorderTraversion\NonRecursive as InNonRecursive;
-use Algorithm\BinaryTree\InorderTraversion\Recursive as InRecursive;
-use Algorithm\BinaryTree\LayerTraversion\NonRecursive as LayerNonRecursive;
-use Algorithm\BinaryTree\PostorderTraversion\NonRecursive as PostNonRecursive;
-use Algorithm\BinaryTree\PostorderTraversion\Recursive as PostRecursive;
-use Algorithm\BinaryTree\PreorderTraversion\Recursion as PreRecursion;
-use Algorithm\BinaryTree\PreorderTraversion\NonRecursion as PreNonRecursion;
-use Algorithm\BinaryTree\Struct\Tree;
-use Algorithm\BinaryTree\Struct\TreeNode;
-
 class Demo
 {
     public function __construct()
     {
         $tree = $this->structTree();
         $this->traversalTree($tree);
+        $this->checkTree($tree);
     }
 
     /**
      * @desc 创建树
-     * @return Tree
+     * @return Struct\Tree
      */
     private function structTree()
     {
         //根节点
-        $one = new TreeNode('1');
-        $tree = new Tree($one);
+        $one = Facade::createTreeNode(4);
+        $tree = Facade::createTree($one);
 
         //第二层
-        $two = new TreeNode('2');
-        $three = new TreeNode('3');
+        $two = Facade::createTreeNode(2);
+        $three = Facade::createTreeNode(6);
         $one->addLeftChildren($two);
         $one->addRightChildren($three);
 
         //第三层
-        $four = new TreeNode('4');
-        $five = new TreeNode('5');
+        $four = Facade::createTreeNode(1);
+        $five = Facade::createTreeNode(3);
         $two->addLeftChildren($four);
         $two->addRightChildren($five);
 
-        $six = new TreeNode('6');
-        $seven = new TreeNode('7');
+        $six = Facade::createTreeNode(5);
+        $seven = Facade::createTreeNode(7);
         $three->addLeftChildren($six);
         $three->addRightChildren($seven);
 
@@ -56,24 +47,40 @@ class Demo
      */
     private function traversalTree($tree)
     {
-        echo '二叉树-先序遍历-递归方式' . PHP_EOL;
-        (new PreRecursion())->traversal($tree->root);
+        echo '先序遍历-递归方式' . PHP_EOL;
+        Facade::preOrderTraversalByRecursion($tree->root);
 
-        echo '二叉树-先序遍历-非递归方式' . PHP_EOL;
-        (new PreNonRecursion())->traversal($tree->root);
+        echo '先序遍历-非递归方式' . PHP_EOL;
+        Facade::preOrderTraversalByNonRecursion($tree->root);
 
-        echo '二叉树-中序遍历-递归方式' . PHP_EOL;
-        (new InRecursive())->traversal($tree->root);
+        echo '中序遍历-递归方式' . PHP_EOL;
+        Facade::inOrderTraversalByRecursion($tree->root);
 
-        echo '二叉树-中序遍历-非递归方式' . PHP_EOL;
-        (new InNonRecursive())->traversal($tree->root);
+        echo '中序遍历-非递归方式' . PHP_EOL;
+        Facade::inOrderTraversalByNonRecursion($tree->root);
 
-        echo '二叉树-后序遍历-递归方式' . PHP_EOL;
-        (new PostRecursive())->traversal($tree->root);
+        echo '后序遍历-递归方式' . PHP_EOL;
+        Facade::postOrderTraversalByRecursion($tree->root);
 
-        (new PostNonRecursive())->traversal($tree->root);
-        echo '二叉树-层级遍历-非递归方式' . PHP_EOL;
-        (new LayerNonRecursive())->traversal($tree->root);
+        Facade::postOrderTraversalBuNonRecursion($tree->root);
+
+        echo '层级遍历-非递归方式' . PHP_EOL;
+        Facade::layerTraversal($tree->root);
+    }
+
+    /**
+     * @desc 判断树
+     * @param $tree
+     */
+    private function checkTree($tree)
+    {
+        echo '平衡二叉树判断' . PHP_EOL;
+        $res = Facade::isBalanceTree($tree->root);
+        echo $res['message'] . PHP_EOL;
+
+        echo '搜索二叉树判断' . PHP_EOL;
+        $res = Facade::isSearchTree($tree->root);
+        echo $res['message'] . PHP_EOL;
     }
 }
 
