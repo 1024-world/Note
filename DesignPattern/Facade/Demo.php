@@ -8,7 +8,7 @@ class Demo
     {
         // 不使用代理模式
         (new SubModuleA)->moduleFunction();
-        (new SunModuleB)->moduleFunction();
+        (new SubModuleB)->moduleFunction();
         # code...
 
         // 使用代理模式

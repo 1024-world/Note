@@ -2,7 +2,7 @@
 
 namespace DesignPattern\Facade;
 
-class SunModuleB implements ModuleInterface
+class SubModuleB implements ModuleInterface
 {
     public function ModuleFunction()
     {

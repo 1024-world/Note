@@ -2,6 +2,11 @@
 
 namespace Algorithm\BinaryTree;
 
+/**
+ * Class Demo
+ * @package Algorithm\BinaryTree
+ * @desc 二叉树测试代码
+ */
 class Demo
 {
     public function __construct()
