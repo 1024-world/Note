@@ -5,7 +5,7 @@ namespace DesignPattern\Factory\SimpleFactory\DemoDir;
 /**
  * Class Demo
  * @package DesignPattern\Factory\SimpleFactory\Demo
- * @desc 汽车示例测试代码
+ * @desc 简单工厂示例测试代码
  */
 class Demo
 {
