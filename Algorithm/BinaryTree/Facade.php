@@ -3,6 +3,7 @@
 namespace Algorithm\BinaryTree;
 
 use Algorithm\BinaryTree\SpecialTree\BalanceTree;
+use Algorithm\BinaryTree\SpecialTree\CompleteTree;
 use Algorithm\BinaryTree\SpecialTree\SearchTree;
 use Algorithm\BinaryTree\Struct\Tree;
 use Algorithm\BinaryTree\Struct\TreeNode;
@@ -120,5 +121,15 @@ class Facade
     public static function isSearchTree(TreeNode $treeNode)
     {
         return (new SearchTree())->isSearch($treeNode);
+    }
+
+    /**
+     * @desc 检验是否是完全二叉树
+     * @param TreeNode $treeNode
+     * @return array
+     */
+    public static function isCompleteTree(TreeNode $treeNode)
+    {
+        return (new CompleteTree())->isCompleteTree($treeNode);
     }
 }

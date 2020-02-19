@@ -7,7 +7,7 @@ namespace Algorithm\BinaryTree;
  * @package Algorithm\BinaryTree
  * @desc 二叉树测试代码
  */
-class Demo
+class Client
 {
     public function __construct()
     {
@@ -86,10 +86,14 @@ class Demo
         echo '搜索二叉树判断' . PHP_EOL;
         $res = Facade::isSearchTree($tree->root);
         echo $res['message'] . PHP_EOL;
+
+        echo '完全二叉树判断' . PHP_EOL;
+        $res = Facade::isCompleteTree($tree->root);
+        echo $res['message'] . PHP_EOL;
     }
 }
 
 // 引用composer的自动加载
 require_once dirname(__DIR__) . '/../vendor/autoload.php';
 
-(new Demo());
+(new Client());
