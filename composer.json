@@ -7,11 +7,10 @@
     "psr-4":{
       "Algorithm\\" : "Algorithm/",
       "DesignPattern\\" : "DesignPattern/",
-      "Cache\\" : "Cache/",
+      "Redis\\" : "Redis/",
       "Frame\\" : "Frame/",
       "HighlyConcurrent\\" : "HighlyConcurrent/",
       "Linux\\" : "Linux/",
-      "MySQL\\" : "MySQL/",
       "Network\\" : "Network/",
       "Nginx\\" : "Nginx/",
       "OOP\\" : "OOP/",

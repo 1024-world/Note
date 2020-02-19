@@ -3,13 +3,13 @@
 namespace Algorithm\Sort;
 
 /**
- * Class Demo
+ * Class Client
  * @package Algorithm\Sort
  * @desc 排序测试代码
  */
-class Demo
+class Client
 {
-    public $arr = [1, 3, 5, 65, 13, 45, 24, 69, 100, 92, 34, 54, 65];
+    public $arr = [16, 3, 14, 65, 13, 45, 24, 69, 100, 92, 34, 54, 65];
 
     public function __construct()
     {
@@ -31,4 +31,4 @@ class Demo
 // 引用composer的自动加载
 require_once dirname(__DIR__) . '/../vendor/autoload.php';
 
-(new Demo());
+(new Client());
