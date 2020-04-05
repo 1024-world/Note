@@ -11,7 +11,7 @@ namespace Algorithm\Sort\Simple;
  * 比这个大的放入到右子数列中，按上述步骤重复操作左右两个子数列，直到每
  * 个区间只有一个数。
  *
- * 平均时间复杂度：O(N*logN)
+ * 平均时间复杂度：O(N*logN)，平均空间复杂度：O(logN)~O(N)，算法不稳定
  */
 class QuickSort 
 {

@@ -12,12 +12,12 @@ class HeapSort
     public function sort($arr = [])
     {
         $size = count($arr);
-        $this->buildHeap($arr, count($arr));
+//        $this->buildHeap($arr, count($arr));
 
-        for ($i = $size - 1; $i > 0; $i--) {
-            $this->swap($arr,$i,0);
-            $size--;
+        for ($i = $size; $i > 0; $i--) {
             $this->buildHeap($arr,$size);
+            $this->swap($arr,$i - 1,0);
+            $size--;
         }
 
         return $arr;

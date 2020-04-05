@@ -6,6 +6,8 @@ namespace Algorithm\Sort\Simple;
  * Class ShellSort
  * @package Algorithm\Sort
  * @desc 希尔排序
+ *
+ * 平均时间复杂度 O(N*logN), 平均空间复杂度 O(1), 算法不稳定
  */
 class ShellSort
 {

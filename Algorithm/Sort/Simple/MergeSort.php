@@ -9,14 +9,13 @@ namespace Algorithm\Sort\Simple;
  * 核心思想：将一个大的序列看成是由N个有序的子序列组成，每个字序列的长度为1，然后两两归并
  * 得到一个合并后的有序序列，然后再两两归并，如此重复，直到得到一个长度为N的有序序列。
  *
- * 平均时间复杂度 O(N*logN)
+ * 平均时间复杂度 O(N*logN)，平均空间复杂度 O(N)， 算法稳定
  */
 class MergeSort
 {
     public function sort($arr = [])
     {
-        if (count($arr) == 1)
-        {
+        if (count($arr) == 1) {
             return $arr;
         }
 

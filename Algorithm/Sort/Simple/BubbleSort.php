@@ -4,7 +4,7 @@ namespace Algorithm\Sort\Simple;
 
 /**
  * Class BubbleSort
- * @package Algorithm\Sort
+ * @package Algorithm\Sort\Simple
  * @desc 冒泡排序
  *
  * 核心思想：相邻的两个数比较大小，较大的数冒起来。
@@ -12,7 +12,7 @@ namespace Algorithm\Sort\Simple;
  * 最后一个位置，这样第一个最大数的位置就排好了。重复上述步骤，
  * 将第二个、第三个直到最后一个最大数排好位置。
  *
- * 平均时间复杂度：O(n2)
+ * 平均时间复杂度：O(n^2)，平均空间复杂度：O(1)，算法稳定。
  */
 class BubbleSort
 {
